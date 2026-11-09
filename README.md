@@ -18,7 +18,7 @@ API REST de réservation de bornes de recharge pour véhicules électriques : No
 | Arrêter, en conservant les données | `docker compose down` |
 | Arrêter et effacer les données | `docker compose down -v` |
 | Charger les données de démonstration | `docker compose exec mongo mongosh bornes /scripts/seed.js` |
-| Voir les index | `docker compose exec mongo mongosh bornes --eval "db.stations.getIndexes(); db.reservations.getIndexes()"` |
+| Voir les index | `docker compose exec mongo mongosh bornes --eval "printjson(db.stations.getIndexes()); printjson(db.reservations.getIndexes())"` |
 
 Une fois lancée, l'API répond sur <http://localhost:3000> :
 
